@@ -1,0 +1,40 @@
+#Pseudocode for Temperature Conversion Program
+
+//Function to convert Fahrenheit to Celsius
+FUNCTION FahrenheitToCelsius(fahrenheit)
+    RETURN (fahrenheit - 32) * 5/9
+END FUNCTION
+
+//Function to convert Celsius to Fahrenheit
+FUNCTION CelsiusToFahrenheit(celsius)
+    RETURN celsius * 9/5 + 32
+END FUNCTION
+
+//Main program
+FUNCTION Main()
+    PRINT "Select the type of conversion:"
+    PRINT "1. Fahrenheit to Celsius"
+    PRINT "2. Celsius to Fahrenheit"
+
+    //Get user choice
+    INPUT choice
+
+    //Check if the choice is valid
+    IF choice is not 1 AND choice is not 2
+        PRINT "Invalid choice. Please enter 1 or 2."
+        RETURN
+    END IF
+
+    //Get temperature from user
+    PRINT "Enter the temperature to be converted:"
+    INPUT temperature
+
+    //Perform conversion based on user choice
+    IF choice is 1
+        convertedTemperature = FahrenheitToCelsius(temperature)
+        PRINT temperature + " Fahrenheit is equal to " + convertedTemperature + " Celsius."
+    ELSE
+        convertedTemperature = CelsiusToFahrenheit(temperature)
+        PRINT temperature + " Celsius is equal to " + convertedTemperature + " Fahrenheit."
+    END IF
+END FUNCTION
